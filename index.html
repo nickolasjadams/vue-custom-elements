@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Custom Elements</title>
+    <style>
+      body.demo {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      arcane-code-confirmation:not(:defined) {
+        opacity: 0;
+        height: 100vh;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body class="demo">
+
+    <arcane-code-confirmation bg-color="#222">
+      <h1>Verification Code</h1>
+			<p>We just sent a verification code to your phone. Please enter it below.</p>
+    </arcane-code-confirmation>
+
+    <p>Typing the secret sequence 'secret' reveals something.</p>
+
+    <arcane-secret-sequence sequence="secret"></arcane-secret-sequence>
+    <a href="#" id="login" style="display: none;">Login</a>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      addEventListener("arcane.sequence.complete", function() {
+        document.querySelector("#login").style.display = "block";
+      })
+    </script>
+  </body>
+</html>

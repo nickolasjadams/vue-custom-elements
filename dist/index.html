@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Custom Elements</title>
+    <style>
+      body.demo {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index.f68b167e.js"></script>
+  </head>
+  <body class="demo">
+
+    <code-confirmation bg-color="#222">
+      <h1>Verification Code</h1>
+			<p>We just sent a verification code to your phone. Please enter it below.</p>
+    </code-confirmation>
+
+    <code-confirmation code-length="5"></code-confirmation>
+
+    <code-confirmation bg-color="#00ffe4" text-color="#ff00bb" underline-color="#0027ff"></code-confirmation>
+
+    
+  </body>
+</html>
